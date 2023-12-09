@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend setup for word-mate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "word-mate"
+  },
+  "author": "Ayush Aman",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0",
+    "nodemon": "^3.0.2"
+  }
+}
