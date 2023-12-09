@@ -5,6 +5,7 @@ import ScoreSheet from './components/ScoreSheet'
 export default function Home() {
   return (
     <>
+    
     <ScoreSheet/>
     <Board/>
     </>
