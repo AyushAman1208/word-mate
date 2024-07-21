@@ -1,7 +1,7 @@
-import { Router } from "express";
-import wordMateGame from "../controllers/word-mate.controllers";
+// import { Router } from "express";
+// import wordMateGame from "../controllers/word-mate.controllers";
 
-const router = Router();
+// const router = Router();
 
-router.post("/start-game", wordMateGame);
-export default router;
+// router.post("/start-game", wordMateGame);
+// export default router;
