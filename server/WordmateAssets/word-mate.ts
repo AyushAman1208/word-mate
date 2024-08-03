@@ -3,8 +3,8 @@ import checkWord from "check-word";
 import { reverseString } from "../utils/helpers";
 const checkwords = checkWord("en");
 export class WordMateGame {
-  private player1: string;
-  private player2: string;
+  public player1: any;
+  public player2: any;
   private moves: string[] = [];
   private scoreplayer1 = 0;
   private scoreplayer2 = 0;
@@ -26,10 +26,9 @@ export class WordMateGame {
     ["", "", "", "", "", "", "", ""],
   ];
 
-  constructor(player1: string, player2: string) {
+  constructor(player1: any, player2: any) {
     this.player1 = player1;
     this.player2 = player2;
-    console.log(checkwords.check("live"));
   }
 
   public getTurn(): number {
@@ -42,17 +41,18 @@ export class WordMateGame {
 
 
 
-  public makeMove(player: string, move: string) {
+  public makeMove( move: string) {
     this.board[parseInt(move[1])][parseInt(move[2])] = move[0];
     this.moves.push(move);
-    if (player === this.player1) {
+    if (this.turn === 1) {
       this.turn = 2;
-    } else if (player === this.player2) {
+    } else if (this.turn === 2) {
       this.turn = 1;
     }
     this.scoringMechanism(move);
+    console.log(this)
   }
-  public getScore(player: string): number {
+  public getScore(player: any): number {
     if (player === this.player1) {
       return this.scoreplayer1;
     }
